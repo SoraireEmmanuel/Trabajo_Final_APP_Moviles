@@ -3,7 +3,7 @@
 
     /*loguin*/
     <string name="inicio">Bienvenido</string>
-    <string name="usuario">Usuario (DNI) </string>
+    <string name="usuario">Usuario</string>
     <string name="contraseña">Contraseña</string>
     <string name="ingresar">Ingresar</string>
     <string name="registrar">Registrarse</string>
@@ -16,9 +16,10 @@
     <string name="nombre">Nombre</string>
     <string name="aoellido">Apellido</string>
     <string name="contrasenia">Contraseña</string>
-    <string name="rol">Rol</string>
+    <string name="grupo">Grupo</string>
+    <string name="telefono">Telefono</string>
     <string name="mail">E-mail</string>
-    <string name="Elija">Elija un Rol</string>
+    <string name="Elija">Elija un Grupo</string>
     <string name="todo">TODO</string>
     <string name="cargarImagen">Cargar Imagen . . . </string>
 

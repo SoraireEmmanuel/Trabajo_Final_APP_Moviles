@@ -18,7 +18,7 @@
         android:layout_marginTop="60dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/inicio"
-        android:textSize="30sp"
+        android:textSize="50sp"
         />
 
     <Space
