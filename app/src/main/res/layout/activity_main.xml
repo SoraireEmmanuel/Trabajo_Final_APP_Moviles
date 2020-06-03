@@ -30,7 +30,6 @@
         android:layout_width="271dp"
         android:layout_height="79dp"
         android:layout_gravity="center_horizontal"
-        android:inputType="number"
         android:autofillHints="false"
         android:hint="@string/usuario"
         tools:ignore="LabelFor" />
@@ -64,7 +63,7 @@
             android:layout_width="190dp"
             android:layout_height="65dp"
             android:text="@string/ingresar" />
-
+<!--
         <Space
             android:layout_width="10dp"
             android:layout_height="wrap_content"
@@ -74,8 +73,9 @@
             android:id="@+id/btnIngresarSinRegistro"
             android:layout_width="190dp"
             android:layout_height="65dp"
+            android:onClick="registrar"
             android:text="@string/ingresarSinRegistro" />
-
+-->
     </LinearLayout>
 
     <Space
