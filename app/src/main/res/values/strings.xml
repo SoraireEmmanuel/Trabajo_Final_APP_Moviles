@@ -2,14 +2,14 @@
     <string name="app_name">Trabajo_Final_APP_Moviles</string>
 
     /*loguin*/
-    <string name="inicio">Bienvenido</string>
+    <string name="inicio">Iniciar Sesion</string>
     <string name="usuario">Usuario</string>
     <string name="contraseña">Contraseña</string>
     <string name="ingresar">Ingresar</string>
     <string name="registrar">Registrarse</string>
-    <string name="title_activity_perfil">PerfilActivity</string>
+<!--    <string name="title_activity_perfil">PerfilActivity</string>
     <string name="tab_text_1">Mi Perfil</string>
-    <string name="tab_text_2">Todos los Perfiles</string>
+    <string name="tab_text_2">Todos los Perfiles</string>-->
 <string name="ingresarSinRegistro">Ingresar Sin Registro</string>
 
     /*registro*/

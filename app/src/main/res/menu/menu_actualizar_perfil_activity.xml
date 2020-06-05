@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/crearTarea"
+        android:title="Nueva Tarea"/>
+
+    <item android:id="@+id/buscar"
+        android:title="Buscar"/>
+
+    <item android:id="@+id/todas_las_Tareas"
+        android:title="Todas las tareas"/>
+
+    <item android:id="@+id/grupo"
+        android:title="Grupos"/>
+
+    <item android:id="@+id/tareasEliminadas"
+        android:title="Tareas Eliminadas"/>
+
+    <item android:id="@+id/mi_Perfil"
+        android:title="Mi Perfil"/>
+
+    <item android:id="@+id/informacion"
+        android:title="Informacion"/>
+</menu>
