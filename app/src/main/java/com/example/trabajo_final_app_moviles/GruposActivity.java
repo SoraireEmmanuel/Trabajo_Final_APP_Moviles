@@ -2,27 +2,22 @@ package com.example.trabajo_final_app_moviles;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.trabajo_final_app_moviles.R;
-
-public class Buscar extends AppCompatActivity {
-
+public class GruposActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.buscar);
+        setContentView(R.layout.grupos);
     }
-
-
     @Override public  boolean onCreateOptionsMenu(Menu mimenu){
-        getMenuInflater().inflate(R.menu.menu_busqueda_activity, mimenu);
+        getMenuInflater().inflate(R.menu.menu_grupos_activity, mimenu);
         return true;
     }
+
     @Override public  boolean onOptionsItemSelected(MenuItem opcion_menu){
         int id=opcion_menu.getItemId();
         if(id==R.id.buscar) {
@@ -55,22 +50,22 @@ public class Buscar extends AppCompatActivity {
 
     //metodos para moverse a las distintas aplicaciones
     private void irBuscar(){
-        Intent buscar = new Intent(this, Buscar.class);
+        Intent buscar = new Intent(this, BuscarActivity.class);
         startActivity(buscar);
     }
 
     private void irInformacion(){
-        Intent informacion = new Intent(this, Informacion.class);
+        Intent informacion = new Intent(this, InformacionActivity.class);
         startActivity(informacion);
     }
 
     private void irTareasEliminadas(){
-        Intent eliminadas = new Intent(this, TareasEliminadas.class);
+        Intent eliminadas = new Intent(this, TareasEliminadasActivity.class);
         startActivity(eliminadas);
     }
 
     private void irGrupo(){
-        Intent grupo = new Intent(this, Grupos.class);
+        Intent grupo = new Intent(this, GruposActivity.class);
         startActivity(grupo);
     }
     private void irMiPerfil(){
@@ -81,5 +76,4 @@ public class Buscar extends AppCompatActivity {
         Intent nueva = new Intent(this, NuevaTareaActivity.class);
         startActivity(nueva);
     }
-
 }

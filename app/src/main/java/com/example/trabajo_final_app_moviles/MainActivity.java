@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             //limpiar();
-            Intent regis = new Intent(MainActivity.this, Registrar.class);
+            Intent regis = new Intent(MainActivity.this, RegistrarActivity.class);
             startActivity(regis);
         }
     };
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     /*inicia sesion */
     private void perfil() {
-        Intent iniciar = new Intent(this, TodasLasTareas.class);
+        Intent iniciar = new Intent(this, TodasLasTareasActivity.class);
         iniciar.putExtra("usuario", cUsuario.getText().toString());
         limpiar();
         startActivity(iniciar);

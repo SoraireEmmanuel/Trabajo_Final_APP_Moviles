@@ -25,7 +25,7 @@
         android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/nombre"
+        android:hint="@string/usuario"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="78dp"
         android:importantForAutofill="no" />

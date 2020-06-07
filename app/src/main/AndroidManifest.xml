@@ -19,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
        </activity>
-        <activity android:name=".Registrar"/>
-        <activity android:name=".TodasLasTareas"/>
-        <activity android:name=".Buscar"/>
-        <activity android:name=".Grupos"/>
+        <activity android:name=".RegistrarActivity"/>
+        <activity android:name=".TodasLasTareasActivity"/>
+        <activity android:name=".BuscarActivity"/>
+        <activity android:name=".GruposActivity"/>
         <activity android:name=".MiPerfilActivity"/>
-        <activity android:name=".TareasEliminadas"/>
-        <activity android:name=".Informacion"/>
+        <activity android:name=".TareasEliminadasActivity"/>
+        <activity android:name=".InformacionActivity"/>
         <activity android:name=".NuevaTareaActivity"/>
     </application>
 

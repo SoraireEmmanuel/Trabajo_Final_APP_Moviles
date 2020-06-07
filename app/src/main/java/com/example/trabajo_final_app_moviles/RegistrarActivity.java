@@ -1,7 +1,6 @@
 package com.example.trabajo_final_app_moviles;
 
 import android.app.AlertDialog;
-import android.app.AppComponentFactory;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -25,12 +24,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
@@ -38,7 +35,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-public class Registrar extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
+public class RegistrarActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
 
     ImageView imagen;
     Spinner spiner;
@@ -87,28 +84,8 @@ public class Registrar extends AppCompatActivity implements Response.Listener<JS
         campoContrasenia =(EditText)findViewById(R.id.contrasenia);
         campoTelefono = (EditText)findViewById(R.id.telefono);
 
-        //CODIGO BASE DE DATOS
-        //request= Volley.newRequestQueue(this);
-        //registro = (Button) findViewById(R.id.btnRegistroForm);
+
     }
-/*abandone el uso de una base de datos externa, este codigo queda por si se implementa en un futuro
-    private void cargarWebService() {
-        // transforma el bit map en arreglo de byte
-       /* ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        imgByte.compress(Bitmap.CompressFormat.JPEG, 100, bos);
-        byte[] img = bos.toByteArray();
-
-        progreso=new ProgressDialog(this);
-        progreso.setMessage("Cargando...");
-        progreso.show();
-
-        String url = "http://192.168.0.198/appmovilestrabajofinal/wsJSONRegistro.php?usuario="+campoUsuario.getText().toString()+
-                "&contrasenia="+campoContrasenia.getText().toString()+"&equipo="+(String) spiner.getSelectedItem()+"&telefono="+campoTelefono.getText().toString();
-        //para admitir espacio en los campos
-        //url=url.replace(" ", "%20");
-        jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
-        request.add(jsonObjectRequest);
-    }*/
 
     public void registar(View view){
         if(bandera) {registrarUsuario();}
@@ -121,10 +98,6 @@ public class Registrar extends AppCompatActivity implements Response.Listener<JS
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         imgByte.compress(Bitmap.CompressFormat.JPEG, 100, bos);
         byte[] img = bos.toByteArray();
-
-
-
-
         ConexionSQLiteHelper conex = new ConexionSQLiteHelper(this, "bd_usuario", null, 1);
         SQLiteDatabase db=conex.getWritableDatabase();
 
@@ -148,7 +121,7 @@ public class Registrar extends AppCompatActivity implements Response.Listener<JS
 
     private void cargar(){
         final CharSequence[] opciones={"Tomar Foto","Cargar Imagen","Cancelar"};
-        final AlertDialog.Builder alertOpcion=new AlertDialog.Builder(Registrar.this);
+        final AlertDialog.Builder alertOpcion=new AlertDialog.Builder(RegistrarActivity.this);
         alertOpcion.setTitle("Seleccione una Opcion");
         alertOpcion.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override

@@ -1,25 +1,58 @@
 package com.example.trabajo_final_app_moviles;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TabHost;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MiPerfilActivity extends AppCompatActivity {
+public class TodasLasTareasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actualizar_perfil);
-    }
+        setContentView(R.layout.todas_las_tareas);
 
+
+        /*logica del TAB*/
+        Resources res = getResources();
+        TabHost tabs=(TabHost)findViewById(android.R.id.tabhost);
+        tabs.setup();
+        TabHost.TabSpec spec=tabs.newTabSpec("mitab1");
+        spec.setContent(R.id.tab1);
+        spec.setIndicator("",
+                res.getDrawable(R.drawable.tareainiciada));
+        tabs.addTab(spec);
+        spec=tabs.newTabSpec("mitab2");
+        spec.setContent(R.id.tab2);
+        spec.setIndicator("",
+                res.getDrawable(R.drawable.tarea_en_ejecucion));
+        tabs.addTab(spec);
+        spec=tabs.newTabSpec("mitab3");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("",
+                res.getDrawable(R.drawable.tareaenspera));
+        tabs.addTab(spec);
+        spec=tabs.newTabSpec("mitab3");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("",
+                res.getDrawable(R.drawable.tarearevisando));
+        tabs.addTab(spec);
+        spec=tabs.newTabSpec("mitab3");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("",
+                res.getDrawable(R.drawable.tareafinalizada));
+        tabs.addTab(spec);
+        tabs.setCurrentTab(0);
+    }
 
 
     @Override public  boolean onCreateOptionsMenu(Menu mimenu){
-        getMenuInflater().inflate(R.menu.menu_actualizar_perfil_activity, mimenu);
+        getMenuInflater().inflate(R.menu.menu_logeado_activity, mimenu);
         return true;
-    }
+}
 
     @Override public  boolean onOptionsItemSelected(MenuItem opcion_menu){
         int id=opcion_menu.getItemId();
@@ -48,14 +81,14 @@ public class MiPerfilActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(opcion_menu);
-    }
+        }
 
 
-    //metodos para moverse a las distintas aplicaciones
-    private void irBuscar(){
-        Intent buscar = new Intent(this, BuscarActivity.class);
-        startActivity(buscar);
-    }
+        //metodos para moverse a las distintas aplicaciones
+        private void irBuscar(){
+            Intent buscar = new Intent(this, BuscarActivity.class);
+            startActivity(buscar);
+        }
 
     private void irInformacion(){
         Intent informacion = new Intent(this, InformacionActivity.class);
@@ -79,4 +112,5 @@ public class MiPerfilActivity extends AppCompatActivity {
         Intent nueva = new Intent(this, NuevaTareaActivity.class);
         startActivity(nueva);
     }
+
 }
