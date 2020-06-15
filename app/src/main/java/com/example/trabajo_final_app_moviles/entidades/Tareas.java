@@ -7,7 +7,7 @@ public class Tareas {
 
     private Integer id;
     private String descripcion;
-    private Date fechaCreacion;
+    private String fechaCreacion;
     private String prioridad;
     private String titulo;
     private String realizadoPor;
@@ -15,7 +15,7 @@ public class Tareas {
     private String creadoPor;
     private String estado;
 
-    public Tareas(Integer id, String descripcion, Date fechaCreacion, String prioridad, String titulo, String realizadoPor,
+    public Tareas(Integer id, String descripcion, String fechaCreacion, String prioridad, String titulo, String realizadoPor,
                   String revisadoPor, String creadoPor, String estado) {
         this.id = id;
         this.descripcion = descripcion;
@@ -26,6 +26,12 @@ public class Tareas {
         this.revisadoPor=revisadoPor;
         this.creadoPor=creadoPor;
         this.estado=estado;
+    }
+    public Tareas(Integer id, String titulo, String prioridad, String fechaCreacion) {
+        this.id = id;
+        this.fechaCreacion = fechaCreacion;
+        this.prioridad = prioridad;
+        this.titulo = titulo;
     }
 
     public Integer getId() {
@@ -44,11 +50,11 @@ public class Tareas {
         this.descripcion = descripcion;
     }
 
-    public Date getFechaCreacion() {
+    public String getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Date fechaCreacion) {
+    public void setFechaCreacion(String fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 

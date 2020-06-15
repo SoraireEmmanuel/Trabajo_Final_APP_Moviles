@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="0dp"
-    android:paddingRight="0dp" tools:context=".MainActivity"
+    android:layout_height="match_parent" tools:context=".MainActivity"
     android:orientation="vertical">
 
     <TabHost android:id="@android:id/tabhost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAlignment="center">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:layout_gravity="bottom">
+            android:layout_height="match_parent">
 
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:textAlignment="center">
+                android:layout_height="match_parent">
                 <!--tab 1-->
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
                     android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -37,7 +34,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
-                </LinearLayout>
+                </RelativeLayout>
 
                 <!-- tab 2 -->
 
@@ -104,12 +101,7 @@
                 </LinearLayout>
 
             </FrameLayout>
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbarSize="2dp"
-                android:textAlignment="center" />
+
         </LinearLayout>
 
     </TabHost>
